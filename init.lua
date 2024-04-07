@@ -1,1 +1,1 @@
-require("jettconfig"):
+require("jettconfig")
