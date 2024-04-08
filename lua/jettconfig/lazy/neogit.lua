@@ -5,5 +5,11 @@ return {
 		'sindrets/diffview.nvim',
 		'nvim-telescope/telescope.nvim',
 	},
-	config = true,
+	config = function ()
+		local neogit = require('neogit')
+		neogit.setup {}
+		vim.keymap.set('n', '<leader>pg', function()
+		neogit.open()
+		end, {desc = '[P]roject [G]it' })
+	end,
 }
